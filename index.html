@@ -602,7 +602,17 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script> 
+	fetch('/api/config')
+	.then(response => response.json())
+	.then(config => {
+	  const script = document.createElement('script');
+	  script.src = `https://maps.googleapis.com/maps/api/js?key=${config.apiKey}&sensor=false`;
+	  document.head.appendChild(script);
+	})
+	.catch(error => console.error('Error loading the Google Maps API script:', error));
+  
+	</script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
     
