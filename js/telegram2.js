@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
               })
               .catch((error) => {
                   console.error(`Error for chat ID ${chatId}:`, error);
-                  alert("Failed to send message to Telegram.");
+                  alert("Failed to send message...Try more");
               });
         });
     });
