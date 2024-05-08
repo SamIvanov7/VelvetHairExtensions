@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }).then(response => response.json())
               .then(data => {
                   console.log(`Success for chat ID ${chatId}:`, data);
-                  alert("Message sent successfully to Telegram!");
+                  alert("Thanks, I will be in touch with you as soon as possible!");
               })
               .catch((error) => {
                   console.error(`Error for chat ID ${chatId}:`, error);

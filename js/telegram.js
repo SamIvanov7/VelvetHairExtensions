@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
               });
         });
 
-        // Optionally, provide user feedback that the message was sent
-        alert("Order sent successfully to Telegram chats!");
+        
+        alert("Thanks, I will be in touch with you as soon as possible.");
     });
 });
