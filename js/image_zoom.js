@@ -1,22 +1,21 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const images = document.querySelectorAll('.work-entry img');
+document.addEventListener('DOMContentLoaded', function() {
+    const workEntries = document.querySelectorAll('.work-entry a'); // Select the links directly
     const lightbox = document.createElement('div');
     lightbox.className = 'lightbox';
     document.body.appendChild(lightbox);
 
-    const imgTag = document.createElement('img');
-    lightbox.appendChild(imgTag);
+    const img = document.createElement('img'); // Create an img element for the lightbox
+    lightbox.appendChild(img);
 
-    images.forEach(image => {
-        image.addEventListener('click', () => {
-            lightbox.style.display = 'flex';
-            imgTag.src = image.src;
+    workEntries.forEach(entry => {
+        entry.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            img.src = this.querySelector('img').src; // Set the source of the lightbox image
+            lightbox.style.display = 'flex'; // Display the lightbox
         });
     });
 
-    lightbox.addEventListener('click', e => {
-        if (e.target !== imgTag) {
-            lightbox.style.display = 'none';
-        }
+    lightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none'; // Hide the lightbox on click
     });
 });
