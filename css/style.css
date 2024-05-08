@@ -494,6 +494,12 @@ pre {
     .container {
       max-width: 1140px; } }
 
+  @media (max-width: 768px) {
+        .col-md-4 {
+            padding: 15px; /* This adds 15px of padding around each item. Adjust the value as needed. */
+        }
+    }
+    
 .container-fluid {
   width: 100%;
   padding-right: 15px;
