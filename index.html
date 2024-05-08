@@ -185,21 +185,20 @@
         </div>
         <div class="row">
         	<div class="col-md-4 ftco-animate">
-        		<a href="#" class="work-entry">
-        			<img src="images/work-2.jpg" class="img-fluid" alt="Colorlib Template" height="960">
-        			<div class="info d-flex align-items-center">
-        				<div>
-        					<div class="icon mb-4 d-flex align-items-center justify-content-center">
-        						<span class="icon-search"></span>
-        					</div>
-		        			<h3>Before and After</h3>
-	        			</div>
-        			</div>
-        		</a>
-        	</div>
+				<a href="images/work-2.jpg" class="work-entry" onclick="openLightbox(event);">
+					<img src="images/work-2.jpg" class="img-fluid" alt="Colorlib Template" height="960">
+					<div class="info d-flex align-items-center">
+						<div>
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+								<span class="icon-search"></span>
+							</div>
+							<h3>Before and After</h3>
+						</div>
+					</div>
+				</a>
+			</div>
         	<div class="col-md-4 ftco-animate">
-				<a href="#" class="work-entry">
-					<!-- Replacing the <img> tag with a <video> tag -->
+				<a href="images/work-2.mp4" target="_blank" class="work-entry">
 					<video class="img-fluid" autoplay loop muted height="960">
 						<source src="images/work-2.mp4" type="video/mp4">
 						Your browser does not support the video tag.
@@ -214,9 +213,8 @@
 					</div>
 				</a>
 			</div>
-        	<div class="col-md-4 ftco-animate">
-				<a href="#" class="work-entry">
-					<!-- Replacing the <img> tag with a <video> tag -->
+			<div class="col-md-4 ftco-animate">
+				<a href="images/work-5.mp4" target="_blank" class="work-entry">
 					<video class="img-fluid" autoplay loop muted height="960">
 						<source src="images/work-5.mp4" type="video/mp4">
 						Your browser does not support the video tag.
@@ -230,7 +228,7 @@
 						</div>
 					</div>
 				</a>
-			</div>
+			</div>			
 			
         </div>
 	</div>
@@ -462,6 +460,7 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
+  <script src="js/image_zoom.js"></script>
   <script> 
 	fetch('/api/config')
 	.then(response => response.json())
