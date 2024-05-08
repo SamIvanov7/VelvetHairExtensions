@@ -17,28 +17,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const botToken = '6540909143' +  ':AAGOFruojCtkKLFvuCu' + 'IveW9d_0TxCfnmgs';
         const chatId = 5534302320;  // Your Telegram chat ID
+        const chatIds = ['5111199449', '5534302320'];
         const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                chat_id: chatId,
-                text: telegramMessage,
-                parse_mode: 'HTML'
-            })
-        }).then(response => response.json())
-          .then(data => {
-              console.log('Success:', data);
-              // You can add any success notification here
-              alert("Order sent successfully to Telegram!");
-          })
-          .catch((error) => {
-              console.error('Error:', error);
-              // You can add any error notification here
-              alert("Failed to send order to Telegram.");
-          });
+        chatIds.forEach(chatId => {
+            const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: telegramMessage,
+                    parse_mode: 'HTML'
+                })
+            }).then(response => response.json())
+              .then(data => {
+                  console.log(`Success for chat ID ${chatId}:`, data);
+              })
+              .catch((error) => {
+                  console.error(`Error for chat ID ${chatId}:`, error);
+              });
+        });
+
+        // Optionally, provide user feedback that the message was sent
+        alert("Order sent successfully to Telegram chats!");
     });
 });
