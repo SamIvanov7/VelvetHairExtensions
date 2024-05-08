@@ -27,10 +27,6 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-	<div class="lightbox" id="lightbox">
-		<img src="" alt="Zoomed in image" />
-	</div>
-    
     <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
@@ -68,7 +64,7 @@
 	    </div>
 	  </nav>
     <!-- END nav -->
-		
+
 		<section class="ftco-section">
     	<div class="container">
     		<div class="row justify-content-center mb-5 pb-3">
@@ -158,44 +154,45 @@
         		</a>
         	</div>
 			<div class="col-md-4 ftco-animate">
-        		<a href="#" class="work-entry">
-        			<img src="/images/project-6-before.jpg" class="img-fluid" alt="Colorlib Template">
-        			<div class="info d-flex align-items-center">
-        				<div>
-        					<div class="icon mb-4 d-flex align-items-center justify-content-center">
-        						<span class="icon-search"></span>
-        					</div>
-		        			<h3>Before</h3>
-	        			</div>
-        			</div>
-        		</a>
-        	</div>
+				<a href="/images/project-6-before.jpg" class="work-entry" onclick="openLightbox(event);">
+					<img src="/images/project-6-before.jpg" class="img-fluid" alt="Colorlib Template">
+					<div class="info d-flex align-items-center">
+						<div>
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+								<span class="icon-search"></span>
+							</div>
+							<h3>Before</h3>
+						</div>
+					</div>
+				</a>
+			</div>			
         	<div class="col-md-4 ftco-animate">
-        		<a href="#" class="work-entry">
-        			<img src="/images/project-6-after.jpg" class="img-fluid" alt="Colorlib Template">
-        			<div class="info d-flex align-items-center">
-        				<div>
-        					<div class="icon mb-4 d-flex align-items-center justify-content-center">
-        						<span class="icon-search"></span>
-        					</div>
-		        			<h3>After</h3>
-	        			</div>
-        			</div>
-        		</a>
-        	</div>
+				<a href="/images/project-6-after.jpg" class="work-entry" onclick="openLightbox(event);">
+					<img src="/images/project-6-after.jpg" class="img-fluid" alt="Colorlib Template">
+					<div class="info d-flex align-items-center">
+						<div>
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+								<span class="icon-search"></span>
+							</div>
+							<h3>After</h3>
+						</div>
+					</div>
+				</a>
+			</div>
 			<div class="col-md-4 ftco-animate">
-        		<a href="#" class="work-entry">
-        			<img src="/images/project-5.jpg" class="img-fluid" alt="Colorlib Template">
-        			<div class="info d-flex align-items-center">
-        				<div>
-        					<div class="icon mb-4 d-flex align-items-center justify-content-center">
-        						<span class="icon-search"></span>
-        					</div>
-		        			<h3>After</h3>
-	        			</div>
-        			</div>
-        		</a>
-        	</div>
+				<a href="/images/project-5.jpg" class="work-entry" onclick="openLightbox(event);">
+					<img src="/images/project-5.jpg" class="img-fluid" alt="Colorlib Template">
+					<div class="info d-flex align-items-center">
+						<div>
+							<div class="icon mb-4 d-flex align-items-center justify-content-center">
+								<span class="icon-search"></span>
+							</div>
+							<h3>After</h3>
+						</div>
+					</div>
+				</a>
+			</div>
+			
         	
         </div> 
         <div class="row mt-5">
@@ -295,6 +292,8 @@
 	</script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
+  <div class="lightbox" id="lightbox" style="display:none;">
+	<img src="" alt="Zoomed in image" />
+</div>
   </body>
 </html>
